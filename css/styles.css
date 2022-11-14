@@ -422,10 +422,35 @@ ul {
   padding: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+}
+
+.modal-icon {
+  fill: var(--bold-color);
 }
 
 .modal-input {
   border: 0;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+}
+
+.modal-fieldset:has(.modal-input:focus) {
+  border: 1px solid var(--highlight);
+}
+
+.modal-fieldset:has(.modal-input:focus) .modal-icon {
+  fill: var(--highlight);
+}
+
+.modal-input:focus {
+  border: 0;
+  outline: 0;
 }
 
 .comment-field {
@@ -439,6 +464,12 @@ ul {
   border-radius: 4px;
   padding: 12px 16px;
   color: rgba(117, 117, 117, 0.5);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+  border: 1px solid var(--highlight);
+  outline: 0;
 }
 
 .modal-checkbox-fieldset {
@@ -455,12 +486,8 @@ ul {
 
 .checkbox-icon {
   position: absolute;
-  content: " ";
-  width: 16px;
-  height: 15px;
-
-  background-color: #000000;
   visibility: hidden;
+  --color2: var(--bright);
   transition-property: visibility;
   transition-duration: 240ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
