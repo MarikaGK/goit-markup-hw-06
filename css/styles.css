@@ -280,6 +280,10 @@ ul {
   text-transform: uppercase;
 }
 
+.footer-newsletter-form {
+  display: flex;
+}
+
 .footer-input {
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -289,7 +293,6 @@ ul {
 }
 
 .footer-newsletter-button {
-  width: 200px;
   color: var(--bright);
   fill: var(--bright);
   background-color: var(--highlight);
@@ -300,12 +303,16 @@ ul {
   line-height: 1.71;
   font-weight: 700;
   letter-spacing: 0.06em;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  margin-left: 12px;
 }
 
 .icon-send {
-  display: inline-block;
+  display: block;
   fill: var(--bright);
+  margin-left: 24px;
 }
 
 /* == ==== End of Footer ==== == */
