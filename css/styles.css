@@ -282,6 +282,7 @@ ul {
 
 .footer-newsletter-form {
   display: flex;
+  align-items: flex-end;
 }
 
 .footer-input {
@@ -292,6 +293,12 @@ ul {
   width: 358px;
 }
 
+.footer-input::placeholder {
+  color: var(--bright);
+  opacity: 0.6;
+  font-family: Roboto;
+}
+
 .footer-newsletter-button {
   color: var(--bright);
   fill: var(--bright);
@@ -300,7 +307,7 @@ ul {
   border: 0;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 1.71;
+  line-height: 30px;
   font-weight: 700;
   letter-spacing: 0.06em;
   display: flex;

@@ -84,7 +84,7 @@
                     <svg class="modal-icon" width="18" height="18">
                       <use href="./images/sprite.svg#icon-person-black-18dp-1"></use>
                     </svg>
-                    <input class="modal-input" type="text" name="name">
+                    <input class="modal-input" type="text" name="name" minlength="2" maxlength="50">
                   </fieldset>
                   </label>
                   <label class="modal-label">
@@ -93,7 +93,8 @@
                     <svg class="modal-icon" width="18" height="18">
                       <use href="./images/sprite.svg#icon-phone-black-18dp-1"></use>
                     </svg>
-                    <input class="modal-input" type="tel" name="phone">
+                    <input class="modal-input" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                    title="Format numeru 123-456-789">
                   </fieldset>
                   </label>
                   <label class="modal-label">
@@ -102,12 +103,12 @@
                     <svg class="modal-icon" width="18" height="18">
                       <use href="./images/sprite.svg#icon-email-black-18dp-1"></use>
                     </svg> 
-                    <input class="modal-input" type="mail" name="mail">
+                    <input class="modal-input" type="email" name="mail">
                   </fieldset>
                   </label>
                   <label class="modal-label comment-field">
                     Komentarz
-                    <textarea class="modal-textarea" name="comment" rows="5" placeholder="Wprowadź tekst"></textarea>
+                    <textarea class="modal-textarea" name="comment" rows="5" maxlength="" placeholder="Wprowadź tekst"></textarea>
                   </label>
                  <fieldset class="modal-checkbox-fieldset">
                   <label>
@@ -514,9 +515,11 @@
           </ul>
         </div>
         <div class="footer-newsletter">
-          <h2>Zapisz się do newslettera</h2>
           <form class="footer-newsletter-form">
+            <label>
+            <h2>Zapisz się do newslettera</h2>
           <input class="footer-input" type="mail" name="newsletter-mail" placeholder="E-mail">
+        </label>
           <button class="footer-newsletter-button" type="submit">Zapisz się
             <svg class="icon-send" width="24" height="24">
               <use href="./images/sprite.svg#icon-icon-send"></use>
